@@ -1,12 +1,3 @@
-"QUERY PLAN"
-"Limit  (cost=4015.14..4015.15 rows=5 width=76) (actual time=2.729..2.730 rows=5 loops=1)"
-"  ->  Sort  (cost=4015.14..4015.37 rows=93 width=76) (actual time=2.729..2.729 rows=5 loops=1)"
-"        Sort Key: (count(*)) DESC"
-"        Sort Method: top-N heapsort  Memory: 25kB"
-"        ->  HashAggregate  (cost=4011.27..4013.60 rows=93 width=76) (actual time=2.683..2.720 rows=34 loops=1)"
-"              Group Key: year"
-"              Batches: 1  Memory Usage: 32kB"
-"              ->  Index Scan using idx_explicit_energy_dance on spotify_tracks  (cost=0.43..3994.82 rows=1645 width=20) (actual time=0.023..2.085 rows=3344 loops=1)"
-"                    Index Cond: ((explicit = true) AND (energy > '0.8'::double precision) AND (danceability > '0.75'::double precision))"
-"Planning Time: 0.110 ms"
-"Execution Time: 2.757 ms"
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ed7a405659175e5afc9a8f5fee305d51190a336a63ffa270ed63167a386054b
+size 840

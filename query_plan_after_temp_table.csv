@@ -1,11 +1,3 @@
-"QUERY PLAN"
-"Limit  (cost=149.12..149.13 rows=5 width=76) (actual time=0.559..0.560 rows=5 loops=1)"
-"  ->  Sort  (cost=149.12..149.62 rows=200 width=76) (actual time=0.559..0.559 rows=5 loops=1)"
-"        Sort Key: (count(*)) DESC"
-"        Sort Method: top-N heapsort  Memory: 25kB"
-"        ->  HashAggregate  (cost=140.80..145.80 rows=200 width=76) (actual time=0.505..0.545 rows=34 loops=1)"
-"              Group Key: year"
-"              Batches: 1  Memory Usage: 48kB"
-"              ->  Seq Scan on temp_explicit_energy_dance  (cost=0.00..86.40 rows=5440 width=20) (actual time=0.015..0.146 rows=3344 loops=1)"
-"Planning Time: 0.063 ms"
-"Execution Time: 0.586 ms"
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbf32238011289388f46ea8588f2e132723956e4b12d5d490b5ba49047a9fb07
+size 673
