@@ -1,10 +1,13 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image 
+from st_pages import Page, show_pages, add_page_title
+from pathlib import Path
 
+# Page name
 st.set_page_config(
     page_title="Spotify Insights Lab",
     page_icon="🎧",
-    layout="wide",
+    # layout="wide",
 )
 
 # Header and Intro
@@ -21,11 +24,10 @@ Built using over **1.2 million tracks**, this app lets you:
 ---
 """)
 
-# Featured Visual (Optional)
-# image = Image.open("../assets/spotify_logo.png")
-# st.image(image, use_column_width=True)
+image = Image.open("assets/spotify_logo.png")
+st.image(image, use_container_width=True)
 
-# Personal Note
+# Personal Note 
 st.markdown("""
 > 💬 _“Spotify has always felt personal to me — long before it launched in India. This project is my way of paying tribute to the platform that changed how I listen, and showcasing the skills I bring to the table as an ML engineer.”_
 

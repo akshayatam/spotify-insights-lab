@@ -1,0 +1,4 @@
+[[pages]] 
+path = "ui/app.py" 
+name = "Home" 
+icon = ":house:"
