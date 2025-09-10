@@ -4,7 +4,7 @@ import plotly.express as px
 import os 
 import time 
 
-st.set_page_config(page_title="🌍 Global Dashboard")
+st.set_page_config(page_title="🌍 Global Dashboard", layout="wide")
 st.title("🌍 Global Music Insights Dashboard")
 
 # Load Data
