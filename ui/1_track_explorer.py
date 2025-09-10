@@ -13,8 +13,8 @@ Use the interactive filters below to explore Spotify tracks by **year**, **dance
 @st.cache_data
 def load_data():
     current_file = os.path.abspath(__file__)
-    base_dir = os.path.dirname(current_file)  # /dashboard/pages
-    project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))  # spotify-insights-lab
+    base_dir = os.path.dirname(current_file)
+    project_root = os.path.abspath(os.path.join(base_dir, ".."))
     data_path = os.path.join(project_root, "data", "spotify_tracks_cleaned.csv")
     return pd.read_csv(data_path)
 

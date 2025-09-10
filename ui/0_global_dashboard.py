@@ -9,7 +9,7 @@ st.title("🌍 Global Music Insights Dashboard")
 # Load Data
 @st.cache_data
 def load_data():
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     return pd.read_csv(os.path.join(project_root, "data", "spotify_tracks_cleaned.csv"))
 
 df = load_data()

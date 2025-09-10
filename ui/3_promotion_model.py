@@ -11,12 +11,12 @@ st.title("📈 Promotion Probability Predictor")
 # ----------------- Load Data and Model -----------------
 @st.cache_data
 def load_data():
-    path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data", "spotify_tracks_with_clusters_and_uplift.csv"))
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "spotify_tracks_with_clusters_and_uplift.csv"))
     return pd.read_csv(path)
 
 df = load_data()
 
-model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "models", "xgb_promotion_model.pkl"))
+model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "models", "xgb_promotion_model.pkl"))
 model = joblib.load(model_path)
 
 features = [
@@ -82,6 +82,8 @@ fig = px.bar(
 )
 st.plotly_chart(fig, use_container_width=True)
 
+# TODO: Fix LLM Explanations
+'''
 # ----------------- LLM Explanation -----------------
 st.markdown("---")
 st.subheader("🤖 AI Explanation of Promotion Likelihood")
@@ -116,6 +118,7 @@ with st.spinner("Generating explanation with LLM..."):
     explanation = llm(prompt, max_new_tokens=120)[0]['generated_text'].split("\n")[-1]
 
 st.markdown(f"> {explanation}")
+'''
 
 # ----------------- Evaluation Metrics -----------------
 st.markdown("---")

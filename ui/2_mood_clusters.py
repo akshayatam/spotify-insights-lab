@@ -8,7 +8,7 @@ st.title("🔍 Mood-Based Clustering")
 
 @st.cache_data
 def load_data():
-    path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data", "spotify_tracks_with_clusters.csv"))
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "spotify_tracks_with_clusters.csv"))
     return pd.read_csv(path)
 
 df_full = load_data()
