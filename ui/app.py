@@ -26,7 +26,7 @@ Built using over **1.2 million tracks**, this app lets you:
 - ⚡ Benchmark SQL query performance like a Spotify data engineer
 
 ---
-            
+
 ### Features 
 - 🎵 Music clustering using ML (KMeans + t-SNE)
 - 📈 Promotion prediction using XGBoost
