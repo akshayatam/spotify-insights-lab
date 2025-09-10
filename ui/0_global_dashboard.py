@@ -1,21 +1,26 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
+import os 
+import time 
 
 st.set_page_config(page_title="🌍 Global Dashboard")
 st.title("🌍 Global Music Insights Dashboard")
 
 # Load Data
 @st.cache_data
-def load_data():
+def load_data(): 
+    start = time.perf_counter() 
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    return pd.read_csv(os.path.join(project_root, "data", "spotify_tracks_cleaned.csv"))
+    df = pd.read_csv(os.path.join(project_root, "data", "spotify_tracks_cleaned.csv")) 
+    load_time = time.perf_counter() - start 
+    return df, load_time 
 
-df = load_data()
+df, load_time = load_data()
 
 # --- Hero Metrics
 st.subheader("📊 At a Glance")
+st.success(f"✅ Loaded {len(df):,} rows in **{load_time:.2f} seconds**") 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total Tracks", f"{len(df):,}")
 col2.metric("% Explicit", f"{(df['explicit'].mean()*100):.2f}%")
