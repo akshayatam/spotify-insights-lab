@@ -7,4 +7,6 @@ xgboost
 numpy 
 plotly 
 transformers 
-st-pages==0.4.1 
+polars 
+duckdb 
+pyarrow 
